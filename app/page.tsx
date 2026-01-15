@@ -35,7 +35,7 @@ export default function Home() {
       <Navbar />
       <main ref={mainRef} className="h-screen overflow-y-scroll snap-y snap-mandatory bg-[#2B2B2B]">
         <section className="relative snap-start h-full">
-          <Image src="/images/img1.jpg" alt="Hero background" fill priority className="absolute object-cover"></Image>
+          <Image src={"./images/img1.jpg"} alt="Hero background" fill priority className="absolute object-cover"></Image>
           <div className="absolute bottom-25 left-15">
             <h1 className="text-2xl text-white font-baskerville uppercase tracking-widest mb-3">Ongi Studio</h1>
             <p className="text-sm max-w-[60ch] text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus fringilla sapien ut consequat. Etiam id fermentum ligula. Nam ut magna eros. Praesent cursus blandit urna in congue. Etiam bibendum fringilla est, tincidunt sagittis nibh ultrices ac.</p>
@@ -43,7 +43,7 @@ export default function Home() {
         </section>
 
         <section className="relative snap-start h-full">
-          <Image src="/images/img2.jpg" alt="Hero background" fill priority className="absolute object-cover"></Image>
+          <Image src={"./images/img2.jpg"} alt="Hero background" fill priority className="absolute object-cover"></Image>
           <div className="absolute top-25 left-15">
             <Subheader>featured collection</Subheader>
             <h1 className="text-2xl text-white font-baskerville uppercase tracking-widest mb-3">Bubliki 2026</h1>
