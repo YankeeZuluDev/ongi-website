@@ -5,22 +5,22 @@ export default function Navbar() {
     <nav className="px-15 mx-auto fixed text-background z-10 text-xs uppercase tracking-widest">
       <ul className="flex items-center justify-center gap-6 min-h-15">
         <li>
-          <Link href={"/"}>Home</Link>
+          <Link href={"/"} className="hover:underline underline-offset-6 decoration-1">Home</Link>
         </li>
         <li>
-          <Link href={"/"}>About</Link>
+          <Link href={"/"} className="hover:underline underline-offset-6 decoration-1">About</Link>
         </li>
         <li>
-          <Link href={"/"}>Projects</Link>
+          <Link href={"/"} className="hover:underline underline-offset-6 decoration-1">Projects</Link>
         </li>
         <li>
-          <Link href={"/"}>Shop</Link>
+          <Link href={"/"} className="hover:underline underline-offset-6 decoration-1">Shop</Link>
         </li>
         <li>
-          <Link href={"/"}>People</Link>
+          <Link href={"/"} className="hover:underline underline-offset-6 decoration-1">People</Link>
         </li>
         <li>
-          <Link href={"/"}>Contact</Link>
+          <Link href={"/"} className="hover:underline underline-offset-6 decoration-1">Contact</Link>
         </li>
       </ul>
     </nav>

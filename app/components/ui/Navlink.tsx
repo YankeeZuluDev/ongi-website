@@ -3,6 +3,6 @@ import { ReactNode } from "react";
 
 export default function Navlink({ children, href }: { children: ReactNode, href: string }) {
   return (
-    <Link href={href} className="relative text-sm text-background uppercase after:absolute after:-bottom-0.75 after:left-0 after:w-full after:h-px after:bg-background">{children}</Link>
+    <Link href={href} className="text-sm text-background uppercase underline underline-offset-6 decoration-1">{children}</Link>
   );
 }
