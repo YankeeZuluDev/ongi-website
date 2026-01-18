@@ -10,7 +10,7 @@ export default function FeaturedProject() {
     <FullPageSection>
       <div className="grid grid-cols-2 h-full">
         <div className="relative h-full">
-          <Image src={"/images/img3.jpg"} alt="123" fill className="object-cover" />
+          <Image src={"./images/img3.jpg"} alt="123" fill className="object-cover" />
         </div>
         <div className="flex justify-center items-center">
           <div>
