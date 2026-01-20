@@ -11,7 +11,7 @@ export default function Navbar() {
           <Link href={"/about"} className="hover:underline underline-offset-6 decoration-1">About</Link>
         </li>
         <li>
-          <Link href={"/"} className="hover:underline underline-offset-6 decoration-1">Projects</Link>
+          <Link href={"/projects"} className="hover:underline underline-offset-6 decoration-1">Projects</Link>
         </li>
         <li>
           <Link href={"/"} className="hover:underline underline-offset-6 decoration-1">Shop</Link>

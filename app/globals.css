@@ -37,11 +37,11 @@ body {
   font-family: IBM_Plex_Sans, Arial, Helvetica, sans-serif;
 }
 
-section {
+.full-page-section {
   opacity: 0;
   transition: opacity 500ms ease-in-out;
 }
 
-section.current-section {
+.full-page-section.current-section {
   opacity: 1;
 }

@@ -19,7 +19,7 @@ export default function Home() {
     const main = mainRef.current;
     if (!main) return;
 
-    const sections = main.querySelectorAll('section');
+    const sections = main.querySelectorAll('.full-page-section');
     sections[0]?.classList.add('current-section');
   }, []);
 
@@ -35,7 +35,7 @@ export default function Home() {
       }
 
       // Get all sections
-      const sections = main.querySelectorAll('section');
+      const sections = main.querySelectorAll('.full-page-section');
 
       // Get direction from deltaY
       const direction = e.deltaY > 0 ? 1 : -1;

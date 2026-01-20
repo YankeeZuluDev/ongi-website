@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export default function Footer() {
+export default function Footer({ light = false }: { light?: boolean }) {
   return (
-    <div className="flex gap-x-24 h-full text-background p-15">
+    <footer className={`flex gap-x-24 h-full p-15 ${light ? "bg-background text-foreground" : "bg-foreground text-background"}`}>
       <div>
         <ul>
           <li>
@@ -53,6 +53,6 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-    </div>
+    </footer>
   );
 }
