@@ -40,7 +40,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className="col-span-12 row-span-4 p-15">
+        <div className="col-span-12 row-span-4">
           <Footer />
         </div>
       </div>

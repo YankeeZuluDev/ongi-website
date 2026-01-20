@@ -8,7 +8,7 @@ export default function Navbar() {
           <Link href={"/"} className="hover:underline underline-offset-6 decoration-1">Home</Link>
         </li>
         <li>
-          <Link href={"/"} className="hover:underline underline-offset-6 decoration-1">About</Link>
+          <Link href={"/about"} className="hover:underline underline-offset-6 decoration-1">About</Link>
         </li>
         <li>
           <Link href={"/"} className="hover:underline underline-offset-6 decoration-1">Projects</Link>

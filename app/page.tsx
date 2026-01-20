@@ -8,7 +8,7 @@ import FeaturedProject from "./components/sections/home/FeaturedProject";
 import FeaturedProjectGallery from "./components/sections/home/FeaturedProjectGallery";
 import Contact from "./components/sections/home/Contact";
 
-const TRANSITION_DURATION = 600;
+const TRANSITION_DURATION = 500;
 
 export default function Home() {
   const mainRef = useRef<HTMLElement>(null);
@@ -66,7 +66,7 @@ export default function Home() {
             setTimeout(() => {
               setIsTransitioning(false);
             }, TRANSITION_DURATION);
-          }, 250);
+          }, 225);
         }, TRANSITION_DURATION);
       }
     };
@@ -79,7 +79,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main ref={mainRef} className="h-screen overflow-y-scroll snap-y snap-mandatory bg-foreground">
+      <main ref={mainRef} className="h-screen overflow-y-scroll snap-y snap-mandatory bg-foreground no-scrollbar">
         <Hero />
         <LatestCollection />
         <FeaturedProject />

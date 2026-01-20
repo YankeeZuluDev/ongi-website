@@ -19,6 +19,18 @@
   }
 } */
 
+/* globals.css */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE + Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -27,7 +39,7 @@ body {
 
 section {
   opacity: 0;
-  transition: opacity 600ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 section.current-section {
