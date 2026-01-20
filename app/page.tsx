@@ -8,7 +8,7 @@ import FeaturedProject from "./components/sections/home/FeaturedProject";
 import FeaturedProjectGallery from "./components/sections/home/FeaturedProjectGallery";
 import Contact from "./components/sections/home/Contact";
 
-const TRANSITION_DURATION = 500;
+const TRANSITION_DURATION = 600;
 
 export default function Home() {
   const mainRef = useRef<HTMLElement>(null);
@@ -56,7 +56,7 @@ export default function Home() {
           setCurrentSectionIndex(nextSectionIndex);
           main.scrollTo({
             top: nextSectionIndex * window.innerHeight,
-            behavior: "smooth"
+            behavior: "auto"
           });
 
           setTimeout(() => {
@@ -66,7 +66,7 @@ export default function Home() {
             setTimeout(() => {
               setIsTransitioning(false);
             }, TRANSITION_DURATION);
-          }, 225);
+          }, 50);
         }, TRANSITION_DURATION);
       }
     };
