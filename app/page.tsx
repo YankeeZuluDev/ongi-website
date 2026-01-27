@@ -12,6 +12,7 @@ const TRANSITION_DURATION = 600;
 
 export default function Home() {
   const mainRef = useRef<HTMLElement>(null);
+  const dotsRef = useRef<HTMLDivElement>(null);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -47,13 +48,23 @@ export default function Home() {
       if (nextSectionIndex >= 0 && nextSectionIndex < sections.length) {
         e.preventDefault();
         setIsTransitioning(true);
+        console.log("IsTransitioning: true");
 
         // Make invisible
         sections[currentSectionIndex].classList.remove('current-section');
 
+        // Highlight current section dot
+        if (dotsRef.current) {
+          const dots = dotsRef.current.querySelectorAll(".dot");
+          dots[currentSectionIndex].classList.remove("dot-current");
+          dots[nextSectionIndex].classList.add("dot-current");
+        }
+
         // Wait for fade before scrolling
         setTimeout(() => {
           setCurrentSectionIndex(nextSectionIndex);
+          console.log(`CurrentSectionIndex: ${nextSectionIndex}`);
+
           main.scrollTo({
             top: nextSectionIndex * window.innerHeight,
             behavior: "auto"
@@ -65,6 +76,7 @@ export default function Home() {
 
             setTimeout(() => {
               setIsTransitioning(false);
+              console.log("IsTransitioning: false");
             }, TRANSITION_DURATION);
           }, 50);
         }, TRANSITION_DURATION);
@@ -79,6 +91,14 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      {/* Create dot for each section */}
+      <div ref={dotsRef} className="fixed right-4 bottom-16 z-50 flex flex-col gap-3">
+        <div className="dot dot-current rounded-full w-6 h-6"></div>
+        <div className="dot rounded-full w-6 h-6"></div>
+        <div className="dot rounded-full w-6 h-6"></div>
+        <div className="dot rounded-full w-6 h-6"></div>
+        <div className="dot rounded-full w-6 h-6"></div>
+      </div>
       <main ref={mainRef} className="h-screen overflow-y-scroll snap-y snap-mandatory bg-foreground no-scrollbar">
         <Hero />
         <LatestCollection />
