@@ -1,19 +1,26 @@
-import FullPageSection from "../../ui/FullPageSection";
 import Image from "next/image";
 import Footer from "../shared/Footer";
 import Header from "../../ui/Header";
-import Text from "../../ui/Text";
 import Button from "../../ui/Button";
+import Section from "../../ui/Section";
+import Text from "../../ui/Text";
 
 export default function Contact() {
   return (
-    <FullPageSection>
-      <div className="grid grid-cols-12 grid-rows-12 h-full">
-        <div className="relative col-span-6 row-span-8">
-          <Image src={"./images/img11.jpg"} alt="123" fill className="object-cover" />
+    <Section>
+      <div className="grid grid-cols-12">
+        <div className="p-15 pb-0 col-span-6">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.0834952715663!2d76.95505007653841!3d43.249671878436075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836f00054c9055%3A0x259ed5b1a1e1fccc!2z0J7QvdCz0Lg!5e0!3m2!1sen!2skz!4v1769958553266!5m2!1sen!2skz"
+            width="100%"
+            height="100%"
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
-        <div className="col-span-6 bg-background row-span-8">
-          <div className="flex items-center justify-center h-full">
+        <div className="col-span-6 bg-background">
+          <div className="flex justify-center py-15">
             <div>
               <Header light={false}>Contact</Header>
               <form className="max-w-lg mb-20">
@@ -40,10 +47,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className="col-span-12 row-span-4">
-          <Footer />
-        </div>
       </div>
-    </FullPageSection>
+    </Section>
   );
 }
