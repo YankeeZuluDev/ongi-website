@@ -1,13 +1,19 @@
+"use client"
+
 import Footer from "../components/sections/shared/Footer";
 import Header from "../components/ui/Header";
 import Navbar from "../components/ui/Navbar";
 import Image from "next/image";
 import Text from "../components/ui/Text";
 import Section from "../components/ui/Section";
+import ReactLenis, { useLenis } from "lenis/react";
 
 export default function About() {
+  const lenis = useLenis();
+
   return (
     <>
+      <ReactLenis root />
       <Navbar />
       <main className="bg-foreground">
         <Section>
