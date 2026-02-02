@@ -30,12 +30,12 @@ export default function Projects() {
               </li>
             </ul>
             <div className="grid grid-cols-3 gap-1">
-              <ProjectCard href="/projects/0" text="Vase 1" imgSrc="/images/img8.jpg" />
-              <ProjectCard href="/projects/1" text="Vase 2" imgSrc="/images/img2.jpg" />
-              <ProjectCard href="/projects/2" text="Vase 3" imgSrc="/images/img3.jpg" />
-              <ProjectCard href="/projects/3" text="Vase 4" imgSrc="/images/img4.jpg" />
-              <ProjectCard href="/projects/4" text="Vase 5" imgSrc="/images/img5.jpg" />
-              <ProjectCard href="/projects/5" text="Vase 6" imgSrc="/images/img6.jpg" />
+              <ProjectCard href="/projects/0" text="Vase 1" imgSrc="images/img8.jpg" />
+              <ProjectCard href="/projects/1" text="Vase 2" imgSrc="images/img2.jpg" />
+              <ProjectCard href="/projects/2" text="Vase 3" imgSrc="images/img3.jpg" />
+              <ProjectCard href="/projects/3" text="Vase 4" imgSrc="images/img4.jpg" />
+              <ProjectCard href="/projects/4" text="Vase 5" imgSrc="images/img5.jpg" />
+              <ProjectCard href="/projects/5" text="Vase 6" imgSrc="images/img6.jpg" />
             </div>
           </div>
         </Section>

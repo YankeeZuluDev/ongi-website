@@ -18,7 +18,7 @@ export default function LatestCollection() {
           </div>
         </div>
         <div className="relative col-span-7">
-          <Image src={"/images/img2.jpg"} alt="Hero background" fill className="object-cover"></Image>
+          <Image src={"images/img2.jpg"} alt="Hero background" fill className="object-cover"></Image>
         </div>
       </div>
     </Section>

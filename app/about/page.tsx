@@ -15,7 +15,7 @@ export default function About() {
         <Section>
           <div className="grid grid-cols-12">
             <div className="relative col-span-6">
-              <Image src={"/images/img1.jpg"} alt="123" fill className="object-cover" />
+              <Image src={"images/img1.jpg"} alt="123" fill className="object-cover" />
             </div>
             <div className="col-span-6 py-40 flex justify-center">
               <div>
@@ -34,14 +34,14 @@ export default function About() {
               </div>
             </div>
             <div className="relative col-span-6 h-screen">
-              <Image src={"/images/img3.jpg"} alt="123" fill className="object-cover" />
+              <Image src={"images/img3.jpg"} alt="123" fill className="object-cover" />
             </div>
           </div>
         </Section>
         <Section>
           <div className="grid grid-cols-12">
             <div className="relative col-span-6">
-              <Image src={"/images/img8.jpg"} alt="123" fill className="object-cover" />
+              <Image src={"images/img8.jpg"} alt="123" fill className="object-cover" />
             </div>
             <div className="col-span-6 py-40 flex justify-center">
               <div>

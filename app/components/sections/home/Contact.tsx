@@ -1,9 +1,6 @@
-import Image from "next/image";
-import Footer from "../shared/Footer";
 import Header from "../../ui/Header";
 import Button from "../../ui/Button";
 import Section from "../../ui/Section";
-import Text from "../../ui/Text";
 
 export default function Contact() {
   return (

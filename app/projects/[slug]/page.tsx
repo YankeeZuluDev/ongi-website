@@ -22,31 +22,31 @@ export default function Project() {
     items: [
       {
         id: "0",
-        imgSrc: "/images/img3.jpg"
+        imgSrc: "images/img3.jpg"
       },
       {
         id: "1",
-        imgSrc: "/images/img4.jpg"
+        imgSrc: "images/img4.jpg"
       },
       {
         id: "2",
-        imgSrc: "/images/img5.jpg"
+        imgSrc: "images/img5.jpg"
       },
       {
         id: "3",
-        imgSrc: "/images/img6.jpg"
+        imgSrc: "images/img6.jpg"
       },
       {
         id: "4",
-        imgSrc: "/images/img7.jpg"
+        imgSrc: "images/img7.jpg"
       },
       {
         id: "5",
-        imgSrc: "/images/img8.jpg"
+        imgSrc: "images/img8.jpg"
       },
       {
         id: "6",
-        imgSrc: "/images/img9.jpg"
+        imgSrc: "images/img9.jpg"
       },
     ]
   };
