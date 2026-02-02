@@ -10,11 +10,11 @@ export default function LatestCollection() {
     <Section>
       <div className="grid grid-cols-12">
         <div className="px-15 py-42 bg-background col-span-5">
-          <Subheader>latest collection</Subheader>
+          <Subheader light={false}>latest collection</Subheader>
           <Header light={false}>Bubliki 2026</Header>
           <Text light={false}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus fringilla sapien ut consequat. Etiam id fermentum ligula. Nam ut magna eros. Praesent cursus blandit urna in congue. Etiam bibendum fringilla est, tincidunt sagittis nibh ultrices ac.</Text>
           <div className="mt-10">
-            <Navlink href="/">Learn more</Navlink>
+            <Navlink href="/" light={false}>Learn more</Navlink>
           </div>
         </div>
         <div className="relative col-span-7">
