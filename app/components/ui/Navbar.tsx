@@ -17,9 +17,6 @@ export default function Navbar({ light = true }: { light?: boolean }) {
           <Link href={"/"} className="hover:underline underline-offset-6 decoration-1">Shop</Link>
         </li>
         <li>
-          <Link href={"/"} className="hover:underline underline-offset-6 decoration-1">People</Link>
-        </li>
-        <li>
           <Link href={"/contact"} className="hover:underline underline-offset-6 decoration-1">Contact</Link>
         </li>
       </ul>

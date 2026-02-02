@@ -14,19 +14,19 @@ export default function Projects() {
           <div className="p-15 pt-30">
             <ul className="flex gap-6 mb-6">
               <li>
-                <button className="uppercase hover:underline underline-offset-6 decoration-1">Furniture</button>
+                <button className="uppercase hover:underline underline-offset-6 decoration-1 cursor-pointer">Furniture</button>
               </li>
               <li>
-                <button className="uppercase hover:underline underline-offset-6 decoration-1">Lighting</button>
+                <button className="uppercase hover:underline underline-offset-6 decoration-1 cursor-pointer">Lighting</button>
               </li>
               <li>
-                <button className="uppercase hover:underline underline-offset-6 decoration-1">Vases</button>
+                <button className="uppercase hover:underline underline-offset-6 decoration-1 cursor-pointer">Vases</button>
               </li>
               <li>
-                <button className="uppercase hover:underline underline-offset-6 decoration-1">Interiors</button>
+                <button className="uppercase hover:underline underline-offset-6 decoration-1 cursor-pointer">Interiors</button>
               </li>
               <li>
-                <button className="uppercase hover:underline underline-offset-6 decoration-1">Decorations</button>
+                <button className="uppercase hover:underline underline-offset-6 decoration-1 cursor-pointer">Decorations</button>
               </li>
             </ul>
             <div className="grid grid-cols-3 gap-1">
