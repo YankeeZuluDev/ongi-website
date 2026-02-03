@@ -4,10 +4,9 @@ import Header from "@/app/components/ui/Header";
 import Navbar from "@/app/components/ui/Navbar";
 import Navlink from "@/app/components/ui/Navlink";
 import Section from "@/app/components/ui/Section";
-import Subheader from "@/app/components/ui/Subheader";
 import Text from "@/app/components/ui/Text";
 import ReactLenis from "lenis/react";
-import Image from "next/image";
+import Link from "next/link";
 
 export async function generateStaticParams() {
   const posts = [0, 1, 2, 3, 4, 5];
@@ -17,7 +16,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function Project() {
+export default function ShopItem() {
   const carouselProps: CarouselProps = {
     items: [
       {
@@ -83,6 +82,8 @@ export default function Project() {
                     <p className="text-sm uppercase">20x15x30 mm</p>
                   </div>
                 </div>
+                <p className="text-2xl uppercase mb-9">$2,500</p>
+                <Link href={"/"} className="w-full bg-foreground text-background px-8 py-4 inline-block text-center">Contact</Link>
               </div>
             </div>
           </div>
