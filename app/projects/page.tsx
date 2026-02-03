@@ -54,7 +54,8 @@ export default function Projects() {
           </div>
         </Section>
 
-                <Section>
+        {/* 123 */}
+        <Section>
           <div className="grid grid-cols-12">
             <div className="relative col-span-7">
               <Image src={"images/img7.jpg"} alt="123" fill className="object-cover" />
