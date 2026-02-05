@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Libre_Baskerville, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
+import ReactLenis from "lenis/react";
 
 const libreBaskerville = Libre_Baskerville({
   variable: "--font-libre-baskerville",
@@ -21,10 +22,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`${libreBaskerville.variable} ${iBMPlexSans.variable} antialiased`}>
-        {children}
-      </body>
-    </html>
+    <ReactLenis root>
+      <html lang="en">
+        <body className={`${libreBaskerville.variable} ${iBMPlexSans.variable} antialiased`}>
+          {children}
+        </body>
+      </html>
+    </ReactLenis>
   );
 }

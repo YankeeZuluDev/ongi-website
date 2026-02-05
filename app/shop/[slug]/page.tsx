@@ -52,7 +52,6 @@ export default function ShopItem() {
 
   return (
     <>
-      <ReactLenis root />
       <Navbar />
       <main className="bg-background">
         <Section>

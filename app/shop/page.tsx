@@ -1,4 +1,3 @@
-import ReactLenis from "lenis/react";
 import Navbar from "../components/ui/Navbar";
 import Section from "../components/ui/Section";
 import ShopItemCard from "../components/ui/ShopItemCard";
@@ -8,8 +7,7 @@ import Dropdown from "../components/ui/Dropdown";
 export default function Shop() {
   return (
     <>
-      <ReactLenis root />
-      <Navbar light={false} />
+      <Navbar forceBlackWhiteStyle={true} />
       <main className="bg-background">
         <Section>
           <div className="p-15 pt-30">

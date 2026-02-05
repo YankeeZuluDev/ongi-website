@@ -4,7 +4,7 @@ import Text from "../../ui/Text";
 
 export default function Hero() {
   return (
-    <section className="h-screen">
+    <section className="relative h-screen">
       <Image src={"images/img1.jpg"} alt="Hero background" fill priority className="absolute object-cover"></Image>
       <div className="absolute bottom-25 left-15">
         <Header>Ongi Studio</Header>

@@ -13,7 +13,8 @@ export default function Contact() {
             height="100%"
             allowFullScreen={true}
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade">
+            referrerPolicy="no-referrer-when-downgrade"
+            className="pointer-interactive">
           </iframe>
         </div>
         <div className="col-span-6 bg-background">

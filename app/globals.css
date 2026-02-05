@@ -24,3 +24,7 @@ body {
   color: var(--foreground);
   font-family: IBM_Plex_Sans, Arial, Helvetica, sans-serif;
 }
+
+.lenis.lenis-smooth .pointer-interactive {
+  pointer-events: none
+}
