@@ -25,7 +25,7 @@ export default function Carousel({ carouselProps }: { carouselProps: CarouselPro
         <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${current * 100}%)` }}>
           {carouselProps.items.map((item) => (
             <div key={item.id} className='relative h-screen min-w-full'>
-              <Image src={".././" + item.imgSrc} alt='123' fill className='object-cover'></Image>
+              <Image src={item.imgSrc} alt='123' fill className='object-cover'></Image>
             </div>
           ))}
         </div>

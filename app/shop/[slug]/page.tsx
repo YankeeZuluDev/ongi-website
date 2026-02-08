@@ -2,53 +2,34 @@ import Footer from "@/app/components/sections/shared/Footer";
 import Carousel, { CarouselProps } from "@/app/components/ui/Carousel";
 import Header from "@/app/components/ui/Header";
 import Navbar from "@/app/components/ui/Navbar";
-import Navlink from "@/app/components/ui/Navlink";
 import Section from "@/app/components/ui/Section";
 import Text from "@/app/components/ui/Text";
-import ReactLenis from "lenis/react";
+import { client, urlFor } from "@/src/sanity/client";
+import { ShopItem } from "@/src/types/shopItem";
 import Link from "next/link";
 
 export async function generateStaticParams() {
-  const posts = [0, 1, 2, 3, 4, 5];
+  const shopItems = await client.fetch<ShopItem[]>(`*[_type == "shopItem"] {slug}`);
 
-  return posts.map((post) => ({
-    slug: post.toString()
+  return shopItems.map((shopItem) => ({
+    slug: shopItem.slug.current
   }));
 }
 
-export default function ShopItem() {
+export default async function ShopItemPage({ params }: { params: { slug: string } }) {
+  const { slug } = await params;
+
+  const shopItem = await client.fetch<ShopItem>(`*[_type == "shopItem" && slug.current == "fish"][0]{..., collection->{_id, name}, material->{_id, name}}`, { slug });
+
   const carouselProps: CarouselProps = {
-    items: [
-      {
-        id: "0",
-        imgSrc: "images/img3.jpg"
-      },
-      {
-        id: "1",
-        imgSrc: "images/img4.jpg"
-      },
-      {
-        id: "2",
-        imgSrc: "images/img5.jpg"
-      },
-      {
-        id: "3",
-        imgSrc: "images/img6.jpg"
-      },
-      {
-        id: "4",
-        imgSrc: "images/img7.jpg"
-      },
-      {
-        id: "5",
-        imgSrc: "images/img8.jpg"
-      },
-      {
-        id: "6",
-        imgSrc: "images/img9.jpg"
-      },
-    ]
+    items: []
   };
+
+  shopItem.images.forEach(itemImage =>
+    carouselProps.items.push({
+      id: itemImage._key,
+      imgSrc: urlFor(itemImage).url()
+    }));
 
   return (
     <>
@@ -60,28 +41,38 @@ export default function ShopItem() {
               <Carousel carouselProps={carouselProps} />
             </div>
             <div className="flex justify-center items-center">
-              <div>
-                <Header light={false}>Vaza</Header>
-                <Text light={false}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, id qui? Ex magni omnis officiis quam laboriosam, temporibus quis, veritatis possimus, odio et facilis voluptate earum. Placeat officia facere maxime optio quasi voluptatibus eveniet maiores, dolor voluptates odio veritatis provident. Aliquam, provident atque! Maiores harum totam veritatis, enim consequuntur autem.</Text>
+              <div className="min-w-[60ch]">
+                <Header light={false}>{shopItem.name.en}</Header>
+                <Text light={false}>{shopItem.description.en}</Text>
                 <div className="my-9">
-                  <div className="flex justify-between mb-3">
-                    <p className="text-sm uppercase">Year</p>
-                    <p className="text-sm uppercase">2021</p>
-                  </div>
-                  <div className="flex justify-between mb-3">
-                    <p className="text-sm uppercase">Collection</p>
-                    <p className="text-sm uppercase">Le Glinoméux Collection</p>
-                  </div>
-                  <div className="flex justify-between mb-3">
-                    <p className="text-sm uppercase">Material</p>
-                    <p className="text-sm uppercase">Super-Clay</p>
-                  </div>
-                  <div className="flex justify-between mb-3">
-                    <p className="text-sm uppercase">Size</p>
-                    <p className="text-sm uppercase">20x15x30 mm</p>
-                  </div>
+                  {shopItem.year && (
+                    <div className="flex justify-between mb-3">
+                      <p className="text-sm uppercase">Year</p>
+                      <p className="text-sm uppercase">{shopItem.year}</p>
+                    </div>
+                  )}
+                  {shopItem.collection && (
+                    <div className="flex justify-between mb-3">
+                      <p className="text-sm uppercase">Collection</p>
+                      <p className="text-sm uppercase">{shopItem.collection.name.en}</p>
+                    </div>
+                  )}
+                  {shopItem.material && (
+                    <div className="flex justify-between mb-3">
+                      <p className="text-sm uppercase">Material</p>
+                      <p className="text-sm uppercase">{shopItem.material.name.en}</p>
+                    </div>
+                  )}
+                  {shopItem.size && shopItem.size.width && shopItem.size.height && shopItem.size.depth && (
+                    <div className="flex justify-between mb-3">
+                      <p className="text-sm uppercase">Size</p>
+                      <p className="text-sm uppercase">{shopItem.size?.width}X{shopItem.size?.height}X{shopItem.size?.depth} mm</p>
+                    </div>
+                  )}
                 </div>
-                <p className="text-2xl uppercase mb-9">$2,500</p>
+                {shopItem.price && (
+                  <p className="text-2xl uppercase mb-9">${shopItem.price?.toLocaleString()}</p>
+                )}
                 <Link href={"/"} className="w-full bg-foreground text-background px-8 py-4 inline-block text-center">Contact</Link>
               </div>
             </div>
